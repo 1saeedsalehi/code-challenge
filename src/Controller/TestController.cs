@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Abstractions.Contracts;
+using Abstractions.Impl;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EchantionChallenge.Controller
 {
-    [Route("test")]
+    [Produces("application/json")]
+    [Route("messaging")]
     [AllowAnonymous]
     public class TestController : Microsoft.AspNetCore.Mvc.Controller
     {
@@ -24,9 +28,54 @@ namespace EchantionChallenge.Controller
         public async Task<IActionResult> Test([FromBody] RequestMessage request,CancellationToken cancellationToken)
         {
            
-            var result = await _mediator.Send(new Ping{Message =  request.Request},cancellationToken);
+            var result = await _mediator.Send(new DefaultRequest{ Request =  request.Request},cancellationToken);
             
             return Ok(result);
         }
+
+
+        //public IResponseMessage Post(RequestMessage requestMessage)
+        //{
+        //    ResponseMessage response = new ResponseMessage();
+        //    try
+        //    {
+        //        if (requestMessage == null)
+        //        {
+        //            response.Response = "invalid request";
+        //            return response;
+        //        }
+
+        //        List<string> validRequestMessage = new List<string>()
+        //        {
+        //            "Hello","Bye","DefaultRequest"
+        //        };
+
+        //        if (!validRequestMessage.Contains(requestMessage.Request))
+        //        {
+        //            response.Response = "invalid request";
+        //            return response;
+        //        }
+
+        //        if (requestMessage.Request == "Hello")
+        //        {
+        //            response.Response = "Hi";
+        //        }
+
+        //        if (requestMessage.Request == "DefaultRequest")
+        //        {
+        //            response.Response = "Pong";
+        //        }
+        //    }
+        //    catch (Exception exception)
+        //    {
+        //        response.Response = exception.ToString();
+        //    }
+        //    finally
+        //    {
+        //        //Log Request and/or Response to db
+        //    }
+
+        //    return response;
+        //}
     }
 }
