@@ -1,7 +1,7 @@
-﻿using Abstractions.Contracts;
-using System;
+﻿using System;
+using Abstractions.Contracts;
 
-namespace EchantionChallenge.Validation
+namespace Server.Validation
 {
     public class NoCaseValidation : IValidationRules
     {

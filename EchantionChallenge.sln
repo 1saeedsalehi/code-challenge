@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EchantionChallenge", "src\EchantionChallenge.csproj", "{00F971AF-C5C9-4EFD-A67E-F5EF890BAA50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "src\Server.csproj", "{00F971AF-C5C9-4EFD-A67E-F5EF890BAA50}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "client", "client\client.csproj", "{208C5A33-8604-4420-AF40-D567364711A3}"
 EndProject

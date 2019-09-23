@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Abstractions.Contracts;
 using Abstractions.Impl;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EchantionChallenge.Controller
+namespace Server.Controller
 {
     [Produces("application/json")]
     [Route("messaging")]

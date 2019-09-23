@@ -1,8 +1,7 @@
-﻿using Abstractions.Contracts;
-using Abstractions.Impl;
+﻿using Abstractions.Impl;
 using MediatR;
 
-namespace EchantionChallenge
+namespace Server
 {
     public class DefaultRequest : RequestMessage,IRequest<ResponseMessage> 
     {

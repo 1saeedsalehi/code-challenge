@@ -1,7 +1,7 @@
 ﻿using System;
 using Abstractions.Contracts;
 
-namespace EchantionChallenge.Validation
+namespace Server.Validation
 {
     public class PingValidation : IValidationRules
     {

@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Abstractions.Contracts;
 using Abstractions.Impl;
-using EchantionChallenge.Validation;
 using MediatR;
+using Server.Validation;
 using TimeSpan = System.TimeSpan;
 
-namespace EchantionChallenge.Handlers
+namespace Server.Handlers
 {
     public class DefaultRequestHandler : IRequestHandler<DefaultRequest, ResponseMessage>
     {
